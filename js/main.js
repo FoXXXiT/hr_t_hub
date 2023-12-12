@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     let locale = window.navigator.language || 'en';
 
+    console.log(locale);
+
+
     const spinner = document.querySelector('.spinner');
 
     locale = locale.substring(0,2).toLowerCase();
@@ -12,8 +15,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     if(!['en', 'uk'].includes(locale)) {
         locale = 'en';
     }
-
-    console.log(locale);
 
     fetch('https://raw.githubusercontent.com/FoXXXiT/hr_t_hub/master/messages.json').then((data)=> data.json()).then(data=> {
 
