@@ -1,5 +1,8 @@
 @media screen and (max-width: 768px) {
     body {
-        font-size: 10px;
+        font-size: 6px;
+    }
+    .link--external {
+        font-size: 2rem;
     }
 }
