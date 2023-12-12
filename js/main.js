@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     console.log(locale);
 
-
     const spinner = document.querySelector('.spinner');
 
     locale = locale.substring(0,2).toLowerCase();
@@ -21,8 +20,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
         if(!data[locale] && !data[locale].length) {
             return;
         }
-
-        spinner.remove();
+        
+        setTimeout(()=> {
+            spinner.remove();
+        }, 500)
+    
 
         const randomIndex = Math.round(Math.random() * (data[locale].length - 1));
 
