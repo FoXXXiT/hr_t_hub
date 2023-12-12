@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
         locale = 'en';
     }
 
+    console.log(locale);
+
     fetch('https://raw.githubusercontent.com/FoXXXiT/hr_t_hub/master/messages.json').then((data)=> data.json()).then(data=> {
 
         if(!data[locale] && !data[locale].length) {
