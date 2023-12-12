@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121212;
+    font-size: 14px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.wrapper--title {
+    font-size: 9em;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.link--external {
+    display: flex;
+    width: 250px;
+    height: 60px;
+    background: url('../img/telegram.svg') no-repeat #888;
+    background-position: 10px 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    padding-left: 36px;
+    border-radius: 20px;
+}
+
+.qr {
+    margin-bottom: 20px;
+}
+
+.spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #121212;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/spinner.gif') no-repeat center center #000;
+}
