@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     console.log(window.navigator.language);
     
-    let locale = window.navigator.language || 'en-US';
+    let locale = window.navigator.language || 'en';
 
     console.log(locale);
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     locale = locale.substring(0,2).toLowerCase();
 
-    if(!['en-US', 'ua-UA'].includes(locale)) {
+    if(!['en', 'uk'].includes(locale)) {
         locale = 'en';
     }
 
