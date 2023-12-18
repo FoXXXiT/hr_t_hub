@@ -1,11 +1,7 @@
 document.addEventListener('DOMContentLoaded', ()=> {
     const title = document.querySelector('.wrapper--title');
-
-    console.log(window.navigator.language);
     
     let locale = window.navigator.language || 'en';
-
-    console.log(locale);
 
     const spinner = document.querySelector('.spinner');
 
