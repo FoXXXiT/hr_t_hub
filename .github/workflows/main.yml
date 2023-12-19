@@ -1,0 +1,11 @@
+name: Main
+on: [push]
+jobs:
+  deploy:
+    name: Deploy to server
+
+    steps:
+      - name: CD n PULL
+        run: ssh ${{ secrets.USER }}@${{ secrets.HOST }} && cd ${{ secrets.DIR }} && git pull
+    with:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
