@@ -1,15 +1,11 @@
 document.addEventListener('DOMContentLoaded', ()=> {
     const title = document.querySelector('.wrapper--title');
-
+    
     let locale = window.navigator.language || 'en';
-
-    console.log(locale);
 
     const spinner = document.querySelector('.spinner');
 
     locale = locale.substring(0,2).toLowerCase();
-
-    locale = 'uk';
 
     if(!['en', 'uk'].includes(locale)) {
         locale = 'en';
