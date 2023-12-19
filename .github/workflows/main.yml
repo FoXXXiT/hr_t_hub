@@ -1,11 +1,25 @@
-name: Main
-on: [push]
+name: SSH and Git Pull
+
+on:
+  push:
+    branches:
+      - master  # Change this to your branch name
+
 jobs:
   deploy:
-    name: Deploy to server
     runs-on: ubuntu-latest
+
     steps:
-      - name: CD n PULL
-        run: ssh ${{ secrets.USER }}@${{ secrets.HOST }} && cd ${{ secrets.DIR }} && git pull
-    with:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup SSH and run git pull
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22  # Replace with your SSH port if different
+          script: |
+            cd ${{ secrets.DIR }}
+            git pull
