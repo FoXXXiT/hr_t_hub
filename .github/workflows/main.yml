@@ -13,11 +13,7 @@ jobs:
       matrix:
         node-version: [16.x]
 
-    steps:
-      - name: SSH into server
-        run: ssh -v ${{ secrets.REMOTE_USERNAME }}@${{ secrets.REMOTE_HOST }}
-
-
+    steps: 
       - name: Checkout code
         uses: actions/checkout@v2
 
