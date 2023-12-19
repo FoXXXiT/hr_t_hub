@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Debug Host
-        run: echo ${{ secrets.REMOTE_HOST }}
+        run: echo ${{ secrets }}
 
       - name: Checkout code
         uses: actions/checkout@v2
