@@ -3,7 +3,7 @@ on: [push]
 jobs:
   deploy:
     name: Deploy to server
-
+    runs-on: ubuntu-latest
     steps:
       - name: CD n PULL
         run: ssh ${{ secrets.USER }}@${{ secrets.HOST }} && cd ${{ secrets.DIR }} && git pull
