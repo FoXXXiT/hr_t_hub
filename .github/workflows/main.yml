@@ -34,6 +34,6 @@ jobs:
           username: ${{ secrets.REMOTE_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22 
-          script: |
+          script: | 
             cd ${{ secrets.DIR }}
             git pull
